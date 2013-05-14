@@ -37,6 +37,7 @@ if ($REX['REDAXO'])
   }
   
   require_once $rex_mobile_root.'classes/Mobile_Detect.php';
-  $REX['MOBILE'] = new Mobile_Detect();
+  $REX['MOBILE_DETECT'] = new Mobile_Detect();
+  $REX['MOBILE'] = ($REX['MOBILE_DETECT']->isMobile() ? ($REX['MOBILE_DETECT']->isTablet() ? 'tablet' : 'phone') : 'computer');
 
 ?>
