@@ -1,0 +1,22 @@
+﻿# Addon: REX MOBILE
+#------------------
+
+# Addon-Eintrag und Addon-Titel
+rex_mobile_menu_link = Mobile Detect
+rex_mobile_title = Mobile Detect &amp; Frameworks <span style="font-size:10px;">(Version 0.1.1)</span>
+
+# Versionen
+rex_mobile_version = 0.1.1
+rex_mobile_bootstrap_versinfo =  Bootstrap v2.3.2, <a href="http://twitter.github.io/bootstrap/" onclick="window.open(this.href); return false;">http://twitter.github.io/bootstrap/</a>
+rex_mobile_foundation_versinfo =  Foundation v4.3.0, <a href="http://foundation.zurb.com/" onclick="window.open(this.href); return false;">http://foundation.zurb.com/</a>
+
+# Menüeinträge
+rex_mobile_menu_info = Erklärung
+rex_mobile_menu_settings = Konfiguration
+
+# Konfiguration
+rex_mobile_config_title = Konfiguration
+rex_mobile_use_framework = Framework benutzen?
+rex_mobile_use_which_framework = Welches Framework benutzen?
+rex_mobile_use_bootstrap = Twitter Bootstrap
+rex_mobile_use_foundation = Foundation by ZURB

@@ -2,7 +2,7 @@
 $rex_mobile = 'rex_mobile';
 $rex_mobile_root = $REX['INCLUDE_PATH'].'/addons/'.$rex_mobile.'/';
 
-$I18N_rex_qr = new i18n($REX['LANG'], $REX['INCLUDE_PATH'].'/addons/'.$rex_mobile.'/lang/');
+//$I18N_rex_qr = new i18n($REX['LANG'], $REX['INCLUDE_PATH'].'/addons/'.$rex_mobile.'/lang/');
 $REX['ADDON']['rxid'][$rex_mobile] = 'rex_mobile';
 $REX['ADDON']['page'][$rex_mobile] = $rex_mobile;
 $REX['ADDON']['name'][$rex_mobile] = 'Mobile-Detect';
@@ -24,6 +24,28 @@ if ($REX['REDAXO'])
        require_once $include;
      }
   }
+  if (!isset($I18N))
+  {
+    $I18N = new i18n($REX['LANG'],$REX['INCLUDE_PATH'] . '/addons/' . $rex_mobile . '/lang/');
+  }
+  
+  // I18N, Addon-Titel für die Navigation
+  if (isset($I18N) && is_object($I18N))
+  {
+    if ($REX['VERSION'] . $REX['SUBVERSION'] < '42')
+    {
+      $I18N->locale = $REX['LANG'];
+      $I18N->filename = $REX['INCLUDE_PATH'] . '/addons/' . $rex_mobile . '/lang/'. $REX['LANG'] . ".lang";
+      $I18N->loadTexts();
+    }
+    else
+    {
+      $I18N->appendFile($REX['INCLUDE_PATH'] . '/addons/' . $rex_mobile . '/lang/');
+    }  
+		$REX['ADDON']['page'][$rex_mobile] = $rex_mobile;
+    $REX['ADDON']['name'][$rex_mobile] = $I18N->msg('rex_mobile_menu_link');
+  }  
+  
 }
   
   $pattern = $rex_mobile_root.'classes/class.*.php';
@@ -40,4 +62,12 @@ if ($REX['REDAXO'])
   $REX['MOBILE_DETECT'] = new Mobile_Detect();
   $REX['MOBILE'] = ($REX['MOBILE_DETECT']->isMobile() ? ($REX['MOBILE_DETECT']->isTablet() ? 'tablet' : 'phone') : 'computer');
 
+
+// Konfiguration
+
+// --- DYN
+$REX['ADDON']['rex_mobile']['use_framework'] = '1';
+$REX['ADDON']['rex_mobile']['use_bootstrap'] = '1';
+$REX['ADDON']['rex_mobile']['use_foundation'] = '0';
+// --- /DYN
 ?>
