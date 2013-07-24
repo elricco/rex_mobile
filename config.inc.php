@@ -69,5 +69,6 @@ if ($REX['REDAXO'])
 $REX['ADDON']['rex_mobile']['use_framework'] = '1';
 $REX['ADDON']['rex_mobile']['use_bootstrap'] = '1';
 $REX['ADDON']['rex_mobile']['use_foundation'] = '0';
+$REX['ADDON']['rex_mobile']['which_framework'] = 'bootstrap';
 // --- /DYN
 ?>

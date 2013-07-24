@@ -1,4 +1,4 @@
-﻿# Addon: REX MOBILE
+# Addon: REX MOBILE
 #------------------
 
 # Addon-Eintrag und Addon-Titel
@@ -17,9 +17,14 @@ rex_mobile_menu_settings = Konfiguration
 # Konfiguration
 rex_mobile_config_title = Konfiguration
 rex_mobile_use_framework = Framework benutzen?
-rex_mobile_use_which_framework = Welches Framework benutzen?
+rex_mobile_which_framework = Welches Framework benutzen?
 rex_mobile_use_bootstrap = Twitter Bootstrap
 rex_mobile_use_foundation = Foundation by ZURB
+rex_mobile_config_btn_save = Speichern
+
+rex_mobile_config_saved = Konfiguration gespeichert
+rex_mobile_config_not_saved = Konfiguration nicht gespeichert
+rex_mobile_error_notwriteable = Die Konfigurationsdatei ist nicht beschreibbar.
 
 #Allgemeine Texte
 rex_mobile_explanation_title = Verwendung und Beispiele
