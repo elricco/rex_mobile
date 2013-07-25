@@ -16,14 +16,6 @@ $REX['ADDON']['author'][$rex_mobile] = 'Tim Filler';
 ////////////////////////////////////////////////////////////////////////////////
 if ($REX['REDAXO'])
 {
-  $pattern = $rex_mobile_root.'functions/function.*.inc.php';
-  $include_files = glob($pattern);
-  if(is_array($include_files) && count($include_files) > 0){
-     foreach ($include_files as $include)
-     {
-       require_once $include;
-     }
-  }
   if (!isset($I18N))
   {
     $I18N = new i18n($REX['LANG'],$REX['INCLUDE_PATH'] . '/addons/' . $rex_mobile . '/lang/');
@@ -47,6 +39,15 @@ if ($REX['REDAXO'])
   }  
   
 }
+
+  $pattern = $rex_mobile_root.'functions/functions.*.inc.php';
+  $include_files = glob($pattern);
+  if(is_array($include_files) && count($include_files) > 0){
+     foreach ($include_files as $include)
+     {
+       require_once $include;
+     }
+  }
   
   $pattern = $rex_mobile_root.'classes/class.*.php';
   $include_files = glob($pattern);
@@ -71,4 +72,19 @@ $REX['ADDON']['rex_mobile']['use_bootstrap'] = '1';
 $REX['ADDON']['rex_mobile']['use_foundation'] = '0';
 $REX['ADDON']['rex_mobile']['which_framework'] = 'bootstrap';
 // --- /DYN
+
+
+// Framework implementieren
+if($REX['ADDON']['rex_mobile']['use_framework'] == '1' && !$REX['REDAXO'])
+{
+  if($REX['ADDON']['rex_mobile']['which_framework'] == 'bootstrap')
+  {
+    rex_register_extension('OUTPUT_FILTER', 'rex_mobile_output_bootstrap');
+  }
+  else
+  {
+    rex_register_extension('OUTPUT_FILTER', 'rex_mobile_output_foundation');
+  }
+}
+
 ?>
