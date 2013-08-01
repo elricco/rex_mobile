@@ -81,10 +81,28 @@ if($REX['ADDON']['rex_mobile']['use_framework'] == '1' && !$REX['REDAXO'])
   {
     rex_register_extension('OUTPUT_FILTER', 'rex_mobile_output_bootstrap');
   }
+  elseif($REX['ADDON']['rex_mobile']['which_framework'] == 'bootstrap3')
+  {
+    rex_register_extension('OUTPUT_FILTER', 'rex_mobile_output_bootstrap3');
+  }
   else
   {
-    rex_register_extension('OUTPUT_FILTER', 'rex_mobile_output_foundation');
+    //rex_register_extension('OUTPUT_FILTER', 'rex_mobile_output_foundation');
+    rex_register_extension('OUTPUT_FILTER', 'rex_mobile_output_foundation_header');
+    rex_register_extension('OUTPUT_FILTER', 'rex_mobile_output_foundation_body');
   }
+}
+
+// Bootstrap CSS generieren
+if (rex_request('rexmobilecssbootstrap', 'string', '') === 'true')
+{
+  rex_mobile_bootstrap_generate_css();
+}
+
+// Foundation CSS generieren
+if (rex_request('rexmobilecssfoundation', 'string', '') === 'true')
+{
+  rex_mobile_foundation_generate_css();
 }
 
 ?>

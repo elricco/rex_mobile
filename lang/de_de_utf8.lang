@@ -7,24 +7,42 @@ rex_mobile_title = Mobile Detect &amp; Frameworks <span style="font-size:10px;">
 
 # Versionen
 rex_mobile_version = 0.1.1
-rex_mobile_bootstrap_versinfo =  Bootstrap v2.3.2, <a href="http://twitter.github.io/bootstrap/" onclick="window.open(this.href); return false;">http://twitter.github.io/bootstrap/</a>
+rex_mobile_bootstrap_versinfo =  Bootstrap v2.3.2, <a href="http://getbootstrap.com/2.3.2/" onclick="window.open(this.href); return false;">http://getbootstrap.com/2.3.2/</a>
+rex_mobile_bootstrap3_versinfo =  Bootstrap v3 RC1, <a href="http://getbootstrap.com/" onclick="window.open(this.href); return false;">http://getbootstrap.com/</a>
 rex_mobile_foundation_versinfo =  Foundation v4.3.0, <a href="http://foundation.zurb.com/" onclick="window.open(this.href); return false;">http://foundation.zurb.com/</a>
 
 # Menüeinträge
 rex_mobile_menu_info = Erklärung
 rex_mobile_menu_settings = Konfiguration
+rex_mobile_menu_css_bootstrap = Custom CSS Bootstrap
+rex_mobile_menu_css_foundation = Custom CSS Foundation
 
 # Konfiguration
 rex_mobile_config_title = Konfiguration
 rex_mobile_use_framework = Framework benutzen?
 rex_mobile_which_framework = Welches Framework benutzen?
 rex_mobile_use_bootstrap = Twitter Bootstrap
+rex_mobile_use_bootstrap3 = Twitter Bootstrap3 RC1
 rex_mobile_use_foundation = Foundation by ZURB
 rex_mobile_config_btn_save = Speichern
 
 rex_mobile_config_saved = Konfiguration gespeichert
 rex_mobile_config_not_saved = Konfiguration nicht gespeichert
 rex_mobile_error_notwriteable = Die Konfigurationsdatei ist nicht beschreibbar.
+
+# CSS
+rex_mobile_css_bootstrap_title = Bootstrap Custom CSS
+rex_mobile_css_bootstrap_text = CSS zur Anpassung der Optik des Frameworks
+rex_mobile_css_bootstrap_infotitle = Hinweis
+rex_mobile_css_bootstrap_info = Die hier angegebenen CSS-Anweisungen können bei der Konfiguration über folgenden Parameter eingefügt werden:<br /><strong>content_css : 'index.php?rexmobilecssbootstrap=true'</strong><br /><br />Diese werden aber eigentlich direkt durch den OUTPUT_FILTER in das Template integriert.
+
+rex_mobile_css_foundation_title = Bootstrap Custom CSS
+rex_mobile_css_foundation_text = CSS zur Anpassung der Optik des Frameworks
+rex_mobile_css_foundation_infotitle = Hinweis
+rex_mobile_css_foundation_info = Die hier angegebenen CSS-Anweisungen können bei der Konfiguration über folgenden Parameter eingefügt werden:<br /><strong>content_css : 'index.php?rexmobilecssfoundation=true'</strong><br /><br />Diese werden aber eigentlich direkt durch den OUTPUT_FILTER in das Template integriert.
+
+rex_mobile_css_saved = CSS wurde gespeichert.
+rex_mobile_css_not_saved = CSS konnte leider nicht gespeichert werden.
 
 #Allgemeine Texte
 rex_mobile_explanation_title = Verwendung und Beispiele

@@ -80,6 +80,23 @@ if(!rex_is_writable($config_file))
 					<div class="rex-form-row">
             			<p class="rex-form-radio rex-form-label-right">
 							<?php
+								if($REX['ADDON']['rex_mobile']['which_framework'] == 'bootstrap3') {
+							?>
+							<input type="radio" checked="checked" name="which_framework" id="which_framework" value="bootstrap3" />
+							<?php
+								}
+								else {
+							?>
+							<input type="radio" name="which_framework" id="use_bootstrap" value="bootstrap3" />
+							<?php
+								}
+							?>
+							<label for="use_bootstrap"><?php echo $I18N->msg('rex_mobile_use_bootstrap3'); ?></label>
+						</p>
+					</div>					
+					<div class="rex-form-row">
+            			<p class="rex-form-radio rex-form-label-right">
+							<?php
 								if($REX['ADDON']['rex_mobile']['which_framework'] == 'foundation') {
 							?>
 							<input type="radio" checked="checked" name="which_framework" id="which_framework" value="foundation" />
