@@ -89,6 +89,7 @@ if (!function_exists('rex_mobile_output_bootstrap'))
     
     $replace  = "\n\n" . '    <!-- Addon REX Mobile Twitter Bootstrap -->';
     $replace .= "\n" . '    <link href="'. $REX['HTDOCS_PATH'] .'files/addons/rex_mobile/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">';
+    $replace .= "\n" . '    <link href="index.php?rexmobilecssbootstrap=true" rel="stylesheet" media="screen">';
     $replace .= "\n" . '    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
     $replace .= "\n" . '    <script src="'. $REX['HTDOCS_PATH'] .'files/addons/rex_mobile/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>' . "\n";
     $replace .= "\n" . '  </head>' . "\n";
@@ -109,10 +110,12 @@ if (!function_exists('rex_mobile_output_bootstrap3'))
     $search = '</head>';
     
     $replace  = "\n\n" . '    <!-- Addon REX Mobile Twitter Bootstrap3 -->';
+    $replace .= "\n" . '    <meta http-equiv="X-UA-Compatible" content="IE=edge">';
     $replace .= "\n" . '    <link href="'. $REX['HTDOCS_PATH'] .'files/addons/rex_mobile/bootstrap3_rc1/css/bootstrap.min.css" rel="stylesheet" media="screen">';
     $replace .= "\n" . '    <link href="index.php?rexmobilecssbootstrap=true" rel="stylesheet" media="screen">';
     $replace .= "\n" . '    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
     $replace .= "\n" . '    <script src="'. $REX['HTDOCS_PATH'] .'files/addons/rex_mobile/bootstrap3_rc1/js/bootstrap.min.js" type="text/javascript"></script>' . "\n";
+    $replace .= "\n" . '    <script src="'. $REX['HTDOCS_PATH'] .'files/addons/rex_mobile/bootstrap3_rc1/js/respond.min.js" type="text/javascript"></script>' . "\n";
     $replace .= "\n" . '  </head>' . "\n";
 
     return str_replace($search, $replace, $content['subject']);
@@ -176,6 +179,7 @@ if (!function_exists('rex_mobile_output_foundation_header'))
     $replace  = "\n\n" . '    <!-- Addon REX Mobile Foundation by ZURB -->';
     $replace .= "\n" . '    <link href="'. $REX['HTDOCS_PATH'] .'files/addons/rex_mobile/foundation/css/normalize.css" rel="stylesheet" media="screen">';
     $replace .= "\n" . '    <link href="'. $REX['HTDOCS_PATH'] .'files/addons/rex_mobile/foundation/css/foundation.min.css" rel="stylesheet" media="screen">';
+    $replace .= "\n" . '    <link href="index.php?rexmobilecssfoundation=true" rel="stylesheet" media="screen">';
     $replace .= "\n" . '    <script src="'. $REX['HTDOCS_PATH'] .'files/addons/rex_mobile/foundation/js/vendor/custom.modernizr.js"></script>';
     $replace .= "\n" . '  </head>' . "\n";
 
