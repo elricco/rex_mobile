@@ -1,0 +1,119 @@
+/*--Bootstrap Custom CSS--*/
+
+/*--Custom Style based on Metrostyle Web UI by Josep Roselló--*/
+
+@font-face {
+    font-family: 'sansationbold';
+    src: url('files/sansation_bold-webfont.eot');
+    src: url('files/sansation_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('files/sansation_bold-webfont.woff') format('woff'),
+         url('files/sansation_bold-webfont.ttf') format('truetype'),
+         url('files/sansation_bold-webfont.svg#sansationbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sansation_lightregular';
+    src: url('files/sansation_light-webfont.eot');
+    src: url('files/sansation_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('files/sansation_light-webfont.woff') format('woff'),
+         url('files/sansation_light-webfont.ttf') format('truetype'),
+         url('files/sansation_light-webfont.svg#sansation_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sansationregular';
+    src: url('files/sansation_regular-webfont.eot');
+    src: url('files/sansation_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('files/sansation_regular-webfont.woff') format('woff'),
+         url('files/sansation_regular-webfont.ttf') format('truetype'),
+         url('files/sansation_regular-webfont.svg#sansationregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+padding: 30px;
+background: #eff3ef;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "sansationregular", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  font-family: "sansationregular", Helvetica, Arial, sans-serif;
+  background-color: #3CA803;
+  border-radius: 0px;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+.navbar a {
+  color: #FFF;
+}
+
+.navbar-brand {
+  max-width: 285px;
+  border-right: 1px solid #69BC3D;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #FFF;
+  background: #236300;
+}
+
+.navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+  background-color: #236300;
+  color: #FFF;
+}
+
+.navbar-nav > li > a {
+  color: #FFF;
+}
+
+.navbar-nav.pull-right {
+  margin-right: -15px;
+}
+
+.navbar-nav.pull-right > li > a {
+  border-left: 1px solid #69BC3D;
+}
+
+.navbar-nav.pull-left > li > a {
+  border-right: 1px solid #69BC3D;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  color: #FFF;
+  background: #236300;
+}
+
+.navbar-toggle {
+    border: 1px solid #FFF;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+.metrostyle-text {
+  background: #FFF;
+  padding: 10px 12px;
+}

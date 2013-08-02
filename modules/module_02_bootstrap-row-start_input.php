@@ -1,0 +1,1 @@
+Diese Modul fügt den Anfang einer Reihe im Bootstrap-Layout &lt;div class="row"&gt; hinzu. Einfach "Block hinzufügen" klicken.

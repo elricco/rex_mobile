@@ -1,0 +1,1 @@
+Diese Modul fügt das Ende einer Reihe im Bootstrap-Layout &lt;/div&gt; hinzu. Einfach "Block hinzufügen" klicken.

@@ -96,10 +96,99 @@
 	<div>
 		<h3><a href="#">Einstellungen / Aufteilung</a></h3>
 		<div>
+			<h2>Nutzung der Spalten</h2>
+			<div stlye="float:left; width: 33.3%">
+				Desktop-Breite verwenden?:
+				<select name="VALUE[13]">
+			        <?php
+				        $desktops = array('false'=>'nein', 'true'=>'ja');
+				        $desktopcurrent = "REX_VALUE[13]";
+         
+				        foreach ( $desktops as $desktop => $key)
+				        {
+				        	$selecteddesk = $desktop == $desktopcurrent ? ' selected="selected"' : '';
+				        	echo '<option value="'.$desktop.'"'. $selecteddesk .'>'. $key .'</option>';
+				        }
+			        ?>
+		        </select>
+		    </div>
+			<div stlye="float:left; width: 33.3%">
+				Tablet-Breite verwenden?:
+				<select name="VALUE[14]">
+			        <?php
+				        $tablets = array('false'=>'nein', 'true'=>'ja');
+				        $tabletcurrent = "REX_VALUE[14]";
+         
+				        foreach ( $tablets as $tablet => $key)
+				        {
+				        	$selectedtab = $tablet == $tabletcurrent ? ' selected="selected"' : '';
+				        	echo '<option value="'.$tablet.'"'. $selectedtab .'>'. $key .'</option>';
+				        }
+			        ?>
+		        </select>
+		    </div>
+			<div stlye="float:left; width: 33.3%">
+				Mobile-Breite verwenden?:
+				<select name="VALUE[15]">
+			        <?php
+				        $mobiles = array('false'=>'nein', 'true'=>'ja');
+				        $mobilecurrent = "REX_VALUE[15]";
+         
+				        foreach ( $mobiles as $mobile => $key)
+				        {
+				        	$selectedmob = $mobile == $mobilecurrent ? ' selected="selected"' : '';
+				        	echo '<option value="'.$mobile.'"'. $selectedmob .'>'. $key .'</option>';
+				        }
+			        ?>
+		        </select>
+		    </div>
+			<br />
 			<h2>Aufteilung der Spalten</h2>
-			<div>
-				
-
+			<div stlye="float:left; width: 33.3%">
+				Desktop-Spalten aufteilen?:
+				<select name="VALUE[16]">
+			        <?php
+				        $desktopscols = array('false'=>'nein', 'true'=>'ja');
+				        $desktopcolcurrent = "REX_VALUE[16]";
+         
+				        foreach ( $desktopcols as $desktopcol => $key)
+				        {
+				        	$selecteddeskcol = $desktopcol == $desktopcolcurrent ? ' selected="selected"' : '';
+				        	echo '<option value="'.$desktopcol.'"'. $selecteddeskcol .'>'. $key .'</option>';
+				        }
+			        ?>
+		        </select>
+		    </div>
+			<div stlye="float:left; width: 33.3%">
+				Tablet-Spalten aufteilen?:
+				<select name="VALUE[17]">
+			        <?php
+				        $tabletcols = array('false'=>'nein', 'true'=>'ja');
+				        $tabletcolcurrent = "REX_VALUE[17]";
+         
+				        foreach ( $tabletcols as $tabletcol => $key)
+				        {
+				        	$selectedtabcol = $tabletcol == $tabletcolcurrent ? ' selected="selected"' : '';
+				        	echo '<option value="'.$tabletcol.'"'. $selectedtabcol .'>'. $key .'</option>';
+				        }
+			        ?>
+		        </select>
+		    </div>
+			<div stlye="float:left; width: 33.3%">
+				Mobile-Spalten aufteilen?:
+				<select name="VALUE[18]">
+			        <?php
+				        $mobilecols = array('false'=>'nein', 'true'=>'ja');
+				        $mobilecolcurrent = "REX_VALUE[18]";
+         
+				        foreach ( $mobilecols as $mobilecol => $key)
+				        {
+				        	$selectedmobcol = $mobilecol == $mobilecolcurrent ? ' selected="selected"' : '';
+				        	echo '<option value="'.$mobilecol.'"'. $selectedmobcol .'>'. $key .'</option>';
+				        }
+			        ?>
+		        </select>
+		    </div>
 		</div>
 	</div>
 
